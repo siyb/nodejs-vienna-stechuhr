@@ -51,7 +51,7 @@
 
 ## Overview
 
-* cat /proc/cpuinfo | grep 'Revision' | awk '{print $3}' | sed 's/^1000//'
+* awk '/Revision/ {print $3}' /proc/cpuinfo | sed 's/^1000//'
     * Refer to: https://elinux.org/RPi_HardwareHistory
     * We are currently using the Pi 2 - Model B
 * NFC Reader:
